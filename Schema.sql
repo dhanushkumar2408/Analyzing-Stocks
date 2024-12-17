@@ -1,0 +1,16 @@
+CREATE DATABASE IF NOT EXISTS StockData;
+
+USE StockData;
+
+CREATE TABLE StockPrices (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    Date DATE NOT NULL,
+    Open FLOAT NOT NULL,
+    High FLOAT NOT NULL,
+    Low FLOAT NOT NULL,
+    Close FLOAT NOT NULL,
+    Volume BIGINT NOT NULL,
+    Dividends FLOAT NOT NULL DEFAULT 0,
+    Stock_Split INT NOT NULL DEFAULT 0,
+    Company VARCHAR(50) NOT NULL
+);
